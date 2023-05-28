@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+@media (min-wdith: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 58vw;
+    height: 92vh;
+    background: #23232e;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list {
+    margin-left: 0;
+    opacity: 0;
+  }
+
+  .menu {
+    display: block;
+  }
+
+}
+
