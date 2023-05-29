@@ -22,7 +22,7 @@ const relogio = setInterval(function time() {
   }
 
   alterarValor(divSegundo, s);
-}, 1500);
+}, 1000);
 
 function alterarValor(elemento, valor) {
   if (elemento.textContent !== padTo2Digits(valor)) {
@@ -31,7 +31,7 @@ function alterarValor(elemento, valor) {
 
     setTimeout(function() {
       elemento.classList.remove('flip');
-    }, 900); // remove a classe flip após 0,9 segundos
+    }, 400); // remove a classe flip após 0,9 segundos
   }
 }
 
