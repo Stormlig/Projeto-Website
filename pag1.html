@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forca Versão Brasileira - Stormlight</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
 
     * {
       margin: 0;
@@ -134,7 +135,14 @@
       justify-content: center;
       background-color: #23232e;
       color: white;
-      padding: 5px;
+      padding-top: 7px;
+      font-family: 'Splash', cursive;
+      font-size: 3em;
+    }
+
+    footer > p {
+      font-family: 'Splash', cursive;
+      font-size: 1.1em;
     }
 
     .info3 {
@@ -193,8 +201,22 @@
   <p>Será adicionado um ranking para classificar os melhores e mais espertos jogadores. Também será adicionado palavras mais complexas juntamente com os seus significados. Então aproveite a versão 2.0 será está disponivel em breve!</p>
 </div>
 </main>
-<footer><P>Stormlight </P></footer>
-<script src="forca.js">
+<footer><P id="rgb">Stormlight</P></footer>
+<script src="forca.js"></script>
+<script>
+  function rainbow() {
+    let rgb = document.getElementById('rgb');
+    let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+    let index = 0;
+
+    setInterval(() => {
+        rgb.style.color = colors[index];
+        index = (index + 1) % colors.length;
+    }, 1000);
+}
+    rainbow();
+
+    div.style.transition = 'color 0.2s';
 </script>
 </body>
 </html>
