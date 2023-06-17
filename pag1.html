@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forca Versão Brasileira - Stormlight</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      background-color: cornsilk;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    .exibir {
+      display: none;
+    }
+
+    p {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+    }
+
+    #receivetxt {
+      margin-top: 25px;
+      margin-left: 55px;
+      padding: 10px;
+    }
+
+    #send {
+      margin-left: 55px;
+      margin-top: 5px;
+      padding: 10px;
+    }
+
+    #contain {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 25px;
+    }
+
+    #imagem {
+      border: 5px solid black;
+      padding: 10px;
+      display: none;
+      margin: 45px 0;
+    }
+
+    #container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .info > p {
+      font-size: 20px;
+      letter-spacing: 1px;
+      margin: 10px;
+    }
+
+    .info {
+      width: 70vw;
+    }
+
+    #start {
+      margin: 15px 0;
+      padding: 5px 15px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    #show {
+      font-size: 20px;
+      margin-top: 5px;
+      margin-left: 55px;
+      letter-spacing: 5px;
+    }
+
+    #showErro {
+      font-size: 20px;
+      margin-left: 55px;
+      margin-bottom: 20px;
+      letter-spacing: 5px;
+    }
+
+    .info1 {
+      margin-bottom: 20px;
+      margin-left: 25px;
+      width: 70vw;
+    }
+
+    .info1 > h2 {
+      margin-bottom: 5px;
+    }
+
+    .info1 > p {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 20px;
+      text-align: justify;
+      padding-left: 35px;
+    }
+
+    ul {
+      margin-bottom: 20px;
+      margin-left: 55px;
+    }
+
+    li {
+      font-size: 20px;
+      line-height: 1.3em;
+    }
+
+    footer {
+      display: flex;
+      justify-content: center;
+      background-color: #23232e;
+      color: white;
+      padding: 5px;
+    }
+
+    .info3 {
+      text-align: center;
+    }
+
+    .info3 > p {
+      font-size: 20px;
+      margin-top: 10px;
+      padding: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Qual a Palavra ?</h1>
+<main>
+  <div id="container"><input type="button" value="Jogar" onclick="start" id="start" ></div>
+
+  <input type="text" name="receivetxt" id="receivetxt" class="exibir" placeholder="Digite uma palavra ou letra" autofocus>
+
+  <input type="button" value="Enviar" onclick="send" id="send" class="exibir">
+
+  <div id="show"></div>
+  <div id="showErro"></div>
+
+  <div id="container">
+    <div class="info" id="info"><p>"Descubra a emoção de desvendar palavras e revelar imagens incríveis na mais nova versão do jogo da forca! Prepare-se para uma experiência única e viciante, onde cada letra correta o levará mais perto da vitória.</p>
+    
+      <p>A melhor parte? Agora você tem 10 chances para errar antes de perder o jogo. Teste suas habilidades e conhecimentos sem medo! Seja você um mestre das palavras ou um novato curioso, a diversão está garantida.</p>
+    
+      <!--<p>Queremos que você mergulhe no mundo da forca como nunca antes. Desafie seus amigos em partidas multiplayer, compartilhe suas conquistas e suba no ranking global. Com cada partida, você se tornará um especialista em decifrar palavras e desbloqueará imagens exclusivas.</p>
+    
+      <p>Não perca tempo! Baixe agora a nova versão do jogo da forca e prepare-se para horas de entretenimento e desafios estimulantes. Será você capaz de desvendar todas as palavras e revelar todas as imagens? A diversão está apenas começando!"</p> -->
+    </div>
+  </div>
+  
+  
+  <div id="contain">
+    <div id="imagem"></div>
+  </div>
+<aside class="info1">
+  <h2>Como jogar:</h2>
+  <p>Em nossa nova versão do jogo da forca, o objetivo é simples: <br> Desvende as palavras e releve a imagem escondida. <br> Prove a você mesmo que você é capaz de desvendar e aprender novas palavras com esse desafio!</p>
+  <h3>Dica:</h3>
+  <ul>
+    <li><strong>1: </strong>Comece com vogais</li>
+    <li><strong>2: </strong>Observe a imagem com forme você for acertando as palavras</li>
+    <li><strong>3: </strong>Peça ajuda a pessoas a sua volta!</li>
+    <li><strong>4: </strong>Tente escrever as possiveis palavras que surgi na sua mente em um pedaço de papel.</li>
+    <li><strong>5: </strong>Lembre que a acentuação também conta.</li>
+  </ul>
+</aside>
+<div id="info5" class="info3">
+  <h2>Proximas atualizações!</h2>
+  <p>Será adicionado um ranking para classificar os melhores e mais espertos jogadores. Também será adicionado palavras mais complexas juntamente com os seus significados. Então aproveite a versão 2.0 será está disponivel em breve!</p>
+</div>
+</main>
+<footer><P>Stormlight </P></footer>
+<script src="forca.js">
+</script>
+</body>
+</html>
