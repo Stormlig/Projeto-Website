@@ -51,6 +51,7 @@ var imagens = {
   jembe: "<img src=\"imagens/jembe.jpeg\"/>",
 };
 
+var info1 = document.getElementById('info1')
 var info5 = document.getElementById('info5')
 var startExibir = document.getElementById('start');
 var chat = document.getElementById('receivetxt');
@@ -79,6 +80,7 @@ function startExibirClickHandler() {
   info.style.display = 'none';
   erro.innerHTML = "";
   info5.style.display = "none"
+  info1.style.display = 'block'
 
   var randomtxt = Math.floor(Math.random() * forca.length);
   randomString = forca[randomtxt];
