@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // --------------------------------------- LOGICA DO GAME A BAIXO --------------------------------------------
 
-  var forca = ["sacola", "parede", "opulência", "plenitude", "transformação", "ampulheta", "regulamentação", "jurisdição", "entretenimento", "veículos", "relógio", "cronômetro", "arbusto", "restaurante", "perfume", "fazenda", "escuderia", "edifício", "alicerces", "alvenaria", "cotonifício", "precipício", "panaceia", "odisseia", "moreia", "zabelê", "jembe"];
+  var forca = ["sacola", "parede", "opulência", "plenitude", "transformação", "ampulheta", "regulamentação", "jurisdição", "entretenimento", "veículos", "relógio", "cronômetro", "arbusto", "restaurante", "perfume", "fazenda", "escuderia", "edifício", "alicerces", "alvenaria", "cotonifício", "precipício", "panaceia", "odisseia", "moreia", "zabelê", "jembe", "magnetismo", "persuasão", "suricato", "fotografia", "aspide", "calotropis", "hibisco", "mandioca", "lagosta"];
 
   var imagens = {
     sacola: "<img src=\"imagens/sacola.jpg\"/>",
@@ -157,6 +157,15 @@ document.addEventListener("DOMContentLoaded", function() {
     moreia: "<img src=\"imagens/moreia.jpg\"/>",
     zabelê: "<img src=\"imagens/zabelê.jpg\"/>",
     jembe: "<img src=\"imagens/jembe.jpeg\"/>",
+    magnetismo: "<img src=\"imagens/magnetismo.jpg\"/>",
+    persuasão: "<img src=\"imagens/persuasão.jpg\"/>",
+    suricato: "<img src=\"imagens/suricato.jpg\"/>",
+    fotografia: "<img src=\"imagens/fotografia.jpg\"/>",
+    aspide: "<img src=\"imagens/aspide.jpg\"/>",
+    hibisco: "<img src=\"imagens/hibisco.jpg\"/>",
+    calotropis: "<img src=\"imagens/calotropis.jpg\"/>",
+    mandioca: "<img src=\"imagens/mandioca.jpg\"/>",
+    lagosta: "<img src=\"imagens/lagosta.jpg\"/>",
   };
 
   var contain = document.getElementById('contain')
