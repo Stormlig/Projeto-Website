@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desvendar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mr+De+Haviland&family=Open+Sans:ital,wght@0,700;0,800;1,400;1,500;1,700;1,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f1e5;
+      background-image: url('imagens/paper-gcd1539601_1280.jpg');
+      background-size: cover;
+      font-family: 'Ysabeau SC', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    main {
+      max-width: 80%;
+    }
+
+    .pergaminho {
+      padding: 10px;
+      border-right: 5px solid rgba(0, 0, 0, 0.974);
+    }
+
+    #typing-animation {
+      color: #000000;
+      font-size: 2.2rem;
+      font-weight: 400;
+      font-style: italic;
+      white-space: wrap;
+      opacity: 0;
+      animation: digitar 6s ease-in-out forwards;
+      text-align: center;
+      line-height: 1.5em;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+    
+    @keyframes digitar {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    a,button {
+      text-decoration: none;
+      color: black;
+      font-size: 1rem;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <div class="pergaminho">
+      <div id="typing-animation" ><span></span></div>
+    </div>
+
+    <div id="container-button" >
+      <button id="voltar"><a href="index.html">Voltar</a></button>
+      <button id="novotexto" onclick="novoTexto()">Gerar outro texto</button>
+    </div>
+
+    <div id="texto">
+      <ul id="textos-list" style="display: none;" >
+        <li>Os tempos difíceis criam homens fortes, os homens fortes criam tempos fáceis. Os tempos fáceis criam homens fracos, os homens fracos criam tempos difíceis. <strong><br>by: Sheikh Rashid</strong></li>
+        <li>Somos todos anjos com uma asa só; e só podemos voar quando abraçados uns aos outros. <strong><br>by: Luciano de Crescenzo</strong></li>
+        <li>Seja o melhor em tudo que faz, ou se contente em saber que existe alguém melhor. É necessário esforço, qualificação e preparo para alcançar resultados extraordinários. <strong><br>by: Evandro Zan</strong></li>
+        <li>Faça o teu melhor, na codição que você tem, enquanto não tem codições melhores, para fazer melhor ainda! <strong><br>by: Mario Sergio Cortella</strong></li>
+        <li>Cada adversidade, cada fracasso, cada dor de cabeça carrega consigo a semente de um benefício igual ou maior. <strong><br>by: Napoleon Hill</strong></li>
+        <li>O entusiasmo é a maior força da alma. Conserva-o e nunca te faltará poder para connseguires o que desejas. <strong><br>by: Napoleon Hill</strong></li>
+        <li>A soberba precede a ruína, e a altivez do espírito precede a queda. <strong><br>Provérbios 16:18</strong></li>
+        <li>Uns se dizem ricos não tendo nada; Outros se dizem pobres tendo grandes riquezas. <strong><br>Provérbios 13:7</strong></li>
+        <li>Não dês às mulheres a tua força, nem os teus caminhos ao que destrói os reis. <strong><br>Provérbios 31:3</strong></li>
+        <li>Assim como a água reflete o rosto, o coração reflete quem somos nós. <strong><br>Provérbios 27:19</strong></li>
+        <li>Entre tantas eu já avisei que o fim é triste. Empogação demais não ajuda e atrapalha. Nós deixa a interrogação pro seu palpite, Que que cê anda pensando, meu quebrada? <strong><br>by: McHariel</strong></li>
+        <li>Preço é o que você paga e valor é o que você recebe. Enquanto não aprendermos que essa diferença existe, estamos fadados a viver uma vida onde jogamos diamantes no lixo, para colocar os restos em cima da mesa. <strong><br>by: Thiago Nigro</strong></li>
+        <li>Sucesso é nunca ter pressa, mas sempre andar em alta velocidade. Não seja impaciente. O sucesso é um processo, e não algo imediato. Você não pode ter pressa para que as coisas aconteçam rápido, mas, isso não te impede de procurar, sempre que possível, apertar o passo. <strong><br>by: Thiago Nigro</strong></li>
+        <li>Se você fecha a porta para os erros, automaticamente fecha também para os acertos. O fracasso é uma bênção: ele sempre ilumina o caminho que não deve ser seguido. <strong><br>by: Thiago Nigro</strong></li>
+        <li>O que trabalha com mão remissa empobrece; mas a mão do diligente enriquece. O que ajunta no verão é filho prudente; mas o que dorme na sega é filho que envergonha. <strong><br>Provérbios 10:4-5</strong></li>
+        <li>Mais sábio é o preguiçoso a seus olhos do que sete homens que sabem responder bem. <strong><br>Provérbios 26:13-16</strong></li>
+        <li>O lobo mais fraco da alcateia disse: Um dia eu serei o mais forte! Todos riram, exceto o mais forte. <strong><br>by: Newton Paquissi</strong></li>
+        <li>Que sejamos água do rio... Assim como a água do rio desvia das pedras contornando-as, também é nossa vida. Na vida vamos encontrar muitas pedras e obstáculos pelo caminho, mas precisamos ser como a água do rio, ou seja, precisamos desviar, contornar e seguir nosso caminho. O Rio não para porque existem pedras, pelo contrário, ele segue seu curso, e assim é também nossa vida. ELA NÃO PODE PARAR, não podemos desistir, mas sim contornar os obstáculos e continuar nossa trajetória. <strong><br>by: Priscilla Rodighiero</strong></li>
+        <li>A vida é muito curta para ser pequena <strong><br>by: Benjamin Disraeli</strong></li>
+        <li>Imita o sábio que, mesmo na opulência, permanece modesto. <strong><br>by: Muslah-Al-Din Saadi</strong></li>
+      </ul>
+    </div>
+  </main>
+  
+  <script>
+function typeWriter(text) {
+  const typingAnimation = document.getElementById('typing-animation');
+  typingAnimation.innerHTML = ''; // Limpa qualquer conteúdo existente
+
+  let index = 0;
+  const intervalId = setInterval(() => {
+    if (index < text.length) {
+      const char = text.charAt(index);
+      typingAnimation.innerHTML += char; // Adiciona o caractere ao texto animado
+      index++;
+
+      // Adiciona uma pequena pausa antes de adicionar o próximo caractere
+      setTimeout(() => {
+        typingAnimation.innerHTML = text.substr(0, index); // Atualiza o texto animado até o caractere atual
+      }, 100);
+    } else {
+      clearInterval(intervalId);
+    }
+  }, 54);
+}
+
+setTimeout(function() {
+  const textosArray = Array.from(document.getElementById('textos-list').children);
+  const aleatorio = Math.floor(Math.random() * textosArray.length);
+  const textoRandom = textosArray[aleatorio].innerHTML;
+  typeWriter(textoRandom);
+}, 1000);
+
+function novoTexto() {
+  const textosArray = Array.from(document.getElementById('textos-list').children);
+  const aleatorio = Math.floor(Math.random() * textosArray.length);
+  const textoRandom = textosArray[aleatorio].innerHTML;
+  typeWriter(textoRandom);
+}
+  </script>
+</body>
+</html>

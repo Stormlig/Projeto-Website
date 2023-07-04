@@ -1,0 +1,397 @@
+@charset "UTF-8";
+
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;0,600;0,700;0,800;1,300;1,500;1,600;1,700;1,800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap');
+  /* FONTS
+  font-family: 'Splash', cursive;
+  font-family: 'Mr De Haviland', cursive;
+  font-family: 'Open Sans', sans-serif;
+  */
+
+  /*
+  opção 1
+  background: linear-gradient(50deg, #3117d7, #c25f14 ); azul e laranja
+  rgb(240, 167, 31); mostarda
+
+  opção 2 "dark"
+  background: linear-gradient(240deg, #0f083c, #1a1223 ); roxo e violeta
+
+  opção 3
+
+  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(195deg, #0b0b0b 30%, #244348 80%, #e5bd0a );
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+header {
+  position: relative;
+  padding: 0 2rem;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.315);
+}
+
+main {
+  flex: 1;
+}
+
+.navbar {
+  width: 100%;
+  height: 100px;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Mr De Haviland', cursive;
+  letter-spacing: 4px;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar .toggle_btn {
+  color: rgb(240, 167, 31);
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+#projetos-conteudo, #games-conteudo{
+  position: absolute;
+  top: 70px;
+  width: 100px;
+  background: rgb(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+  visibility: hidden;
+}
+
+#projetos-conteudo a, #games-conteudo a {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action_btn {
+  background-color: rgb(240, 167, 31);
+  color: black;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: .8rem;
+  cursor: pointer;
+  transition: scale 0.2s;
+}
+
+.action_btn:hover {
+  scale: 1.05;
+  color: #fff;
+}
+
+.action_btn:active {
+  scale: 0.95;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: rgb(240, 167, 31);
+}
+
+/* DROPDOWN_MENU */
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 88px;
+  max-height: 0;
+  width: 300px;
+  background: rgb(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+  max-height: 50vh;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+#projetos-conteudo-dropdown, #games-conteudo-dropdown {
+  margin-top: 10px;
+  display: none;
+  font-weight: lighter;
+}
+
+#projetos-conteudo-dropdown > li {
+  display: block;
+  margin-left: 50px;
+}
+
+#games-conteudo-dropdown > li {
+  display: block;
+  margin-left: 50px;
+}
+
+.arrowS {
+  padding-right: 20px;
+  font-size: 22px;
+}
+
+.arrowSG {
+  padding-right: 20px;
+  font-size: 22px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar {
+    width: 100%;
+    height: 100px;
+    max-width: 96%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* CONTENT FRAME*/
+
+section.secStyle {
+  height: calc(50vh - 88px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.secStyle h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.secStyle p {
+  font-size: 1.4rem;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+/* APP Desvendar */
+
+  h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+
+#msg {
+  width: 80%;
+}
+
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+.typing-animation li {
+  font-family: monospace;
+  font-size: 20px;
+  animation: typing 4s steps(46) ;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid black;
+}
+
+#flex-gerar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gerar {
+  text-align: center;
+  margin: 25px;
+  padding: 10px;
+  font-size: 1.1rem;
+  background-color: rgb(240, 167, 31);
+  color: black;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in;
+}
+
+#gerar:hover {
+  opacity: 0.5;
+}
+
+/* RELOGIO */
+
+.corpo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.corpo > div {
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.694);
+  padding: .4rem;
+}
+
+.relogio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  font-size: 2rem;
+}
+
+.relogio > div {
+  color: #fff;
+  text-align: center;
+  padding: .2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* signature */
+.signature {
+  font-family: 'Mr De Haviland', cursive;
+  font-size: 2rem;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 10rem;
+  font-size: 1.3rem;
+  text-align: center;
+  color: #fff;
+}
+
+/* EFFECT LOADING */
+
+.loading-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-animation {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #333; /* cor da animação */
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-message {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+body.loading {
+  background-color: #fff; /* cor de fundo após a animação */
+  color: #333; /* cor do texto após a animação */
+}
