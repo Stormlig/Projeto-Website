@@ -191,9 +191,11 @@ main {
 .info1 > p {
   font-size: 1.2rem;
   margin-left: 0.5rem;
+  font-weight: 500;
 }
 
 .info1 ul {
+  font-weight: 400;
   list-style: none;
   line-height: 1.8em;
   font-size: 1.2rem;
