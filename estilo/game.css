@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -12,6 +13,7 @@ body {
   background: linear-gradient(10deg , #0540F2, #227CF2, #07B0F2);
   flex-direction: column;
   min-height: 100vh;
+  max-width: 100vw;
   color: white;
   font-family: 'Open Sans', sans-serif;
 }
@@ -73,10 +75,10 @@ main {
 }
 
 .contain {
-  width: 440px; /* ajuste o tamanho conforme necessário */
+  width: 90%; /* ajuste o tamanho conforme necessário */
   height: 300px;
   background: rgba(0, 0, 0, 0.982);
-  border: 15px solid #fffefe04;
+  border: 0.6rem solid #fffefe04;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
@@ -144,31 +146,26 @@ main {
   background-color: black;
 }
 
-
-
 #main-info {
   display: flex;
   justify-content: center;
-  
 }
 
 .info {
-  width: 62%;
+  width: 88%;
   text-align: center;
 }
 
 .info > p {
-  font-size: 1.3em;
+  font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.5em;
-  padding: 10px;
-  text-indent: 35px;
+  padding: 5px;
+  text-indent: 30px;
 }
-
 
 #show {
   font-size: 22px;
-  margin-top: 5px;
   margin-left: 55px;
   letter-spacing: 10px;
   font-weight: bold;
@@ -177,40 +174,34 @@ main {
 
 #showErro {
   font-size: 20px;
-  margin-left: 60px;
+  margin-left: 58px;
   margin-bottom: 20px;
   letter-spacing: 5px;
 }
 
 .info1 {
   display: none;
-  margin-left: 55px;
   margin-bottom: 20px;
 }
 
 .info1 > h2 {
-  font-size: 20px;
-  font-weight: 300;
+  font-size: 16px;
 }
 
 .info1 > p {
-  font-size: 20px;
-  font-weight: 300;
-  margin-left: 20px;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
 }
 
 .info1 ul {
   list-style: none;
-  margin-left: 26px;
-  line-height: 1.5em;
-  letter-spacing: 1px;
-  font-size: 20px;
-  margin-left: 40px;
+  line-height: 1.8em;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  
 }
 
 div.info3 {
-  display: flex;
-  justify-content: space-around;
   text-align: center;
 }
 
@@ -233,11 +224,19 @@ div.info3, p {
 }
 
 div .att-atual, .att-proxima {
-  width: 500px;
+  width: 90%;
   margin-left: 20px;
   background: #F2B33D;
   color: black;
   border-radius: 10px;
+}
+
+@media (min-width: 600px) {
+  div.info3 {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
 }
 
 .notification {

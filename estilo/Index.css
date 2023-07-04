@@ -134,7 +134,7 @@ a:hover {
 .dropdown_menu {
   display: none;
   position: absolute;
-  right: 0;
+  right: 2rem;
   top: 88px;
   max-height: 0;
   width: 300px;
@@ -146,7 +146,7 @@ a:hover {
 }
 
 .dropdown_menu.open {
-  max-height: 50vh;
+  max-height: 80vh;
 }
 
 .dropdown_menu li {
@@ -244,7 +244,8 @@ section.secStyle {
 }
 
 .secStyle p {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  width: 90%;
 }
 
 article {

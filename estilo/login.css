@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -20,7 +21,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 397px;
+  width: 400px;
   padding: 30px;
   -webkit-box-shadow: -4px 7px 46px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: -4px 7px 46px 2px rgba(0, 0, 0, 0.1);
@@ -90,8 +91,8 @@ input {
 
 .arrow {
   font-weight: bold;
-  font-size: 20px;
-  padding: 34px;
+  font-size: 18px;
+  padding: 30px;
 }
 
 #b3 {
@@ -127,6 +128,6 @@ input {
 
 .aviso {
   text-align: center;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
 }
