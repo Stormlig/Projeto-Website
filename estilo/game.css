@@ -102,7 +102,6 @@ main {
 }
 
 @media (min-width: 1080px) {
-  
   .contain {
     width: 800px; /* ajuste o tamanho conforme necessário */
     height: 400px;
