@@ -4,53 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Descubra a Palavra!</title>
-  <script src="login.js"></script>
   <link rel="stylesheet" href="estilo/login.css">
 </head>
 <body>
   <div class="notification" id="notification"></div>
+<div class="div-form">
   <div class="aviso">
     <h1>Aviso importante!!</h1>
     <p>Por favor, após criar um nova conta anotém a senha pois ainda não foi implementado o sistema de recuperação de senha.</p>
   </div>
-<div class="fh5co-form animate-box">
-  <div class="form-group" id="criarC">
-    <h1>Criar Conta</h1>
-    <input type="text" id="criar-login" class="form-control" placeholder="Crie seu login">
-    <input type="password" id="criar-senha" class="form-control" placeholder="Crie sua senha">
-    <div class="button-container">
-      <button id="b3" onclick="voltar()"><span class="arrow">⟵</span></button>
-      <button onclick="criarConta()">Criar Conta</button>
-    </div>
+
+  <div id="criarC">
+    <form action="game.html">
+      <h1>Criar Conta</h1>
+      <input type="text" id="criar-login" placeholder="Crie seu login">
+      <input type="password" id="criar-senha" placeholder="Crie sua senha">
+      <div class="button-container">
+        <button onclick="voltar()"><span >⟵</span></button>
+        <button onclick="criarConta()">Criar Conta</button>
+      </div>
+    </form>
   </div>
 
-  <div  id="loginE" class="form-group">
-    <h1>Login</h1>
-    <input type="text" id="login-login" class="form-control" placeholder="Usuário">
-    <input type="password" id="login-senha" class="form-control" placeholder="Senha">
-    <button onclick="fazerLogin()">Fazer Login</button>
+  <div id="loginE">
+    <form action="game.html">
+      <h1>Login</h1>
+      <input type="text" id="login-login" placeholder="Usuário">
+      <input type="password" id="login-senha" placeholder="Senha">
+      <div class="button-container">
+        <button onclick="alternarForm()">Não tenho uma conta</button>
+        <button onclick="fazerLogin()">Fazer Login</button>
+      </div>
+    </form>
   </div>
-  <div id="b4"><button  onclick="alternarForm()">Não tenho uma conta</button></div>
 </div>
-<script>
-  // Variáveis para armazenar os dados dos usuários
-  function alternarForm() {
-    var criarC = document.getElementById('criarC');
-    var loginE = document.getElementById('loginE');
-    var b3 = document.getElementById('b3')
-    var b4 = document.getElementById('b4')
-    loginE.style.display = 'none'
-    b4.style.display = 'none'
-    criarC.style.display = 'block'
-    b3.style.display = 'block'
-    }
 
-    function voltar() {
-    loginE.style.display = 'block'
-    b4.style.display = 'block'
-    criarC.style.display = 'none'
-    b3.style.display = 'none'
-    }
+<script src="login.js"></script>
+<script>
+function voltar() {
+  var criarC = document.getElementById('criarC');
+  var loginE = document.getElementById('loginE');
+
+  loginE.style.display = 'block'
+  criarC.style.display = 'none'
+}
+
+function alternarForm() {
+  var criarC = document.getElementById('criarC');
+  var loginE = document.getElementById('loginE');
+
+  loginE.style.display = 'none'
+  criarC.style.display = 'block'
+}
 </script>
 </body>
 </html>
