@@ -1,5 +1,3 @@
-
-
 var usuarios = [];
 
 // Função para obter os usuários armazenados no armazenamento local
