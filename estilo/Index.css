@@ -21,6 +21,15 @@
 
   */
 
+  :root {
+    --background-color-light: #ffffff;
+    --background-color-dark: #121212;
+    --text-color-light: #000000;
+    --text-color-dark: #ffffff;
+
+    --button-color: rgb(240, 167, 31);
+  }
+
 * {
   margin: 0;
   padding: 0;
@@ -29,10 +38,20 @@
 }
 
 body {
-  min-height: 100vh;
+  height: 100%;
   background: linear-gradient(195deg, #0b0b0b 30%, #244348 80%, #e5bd0a );
   background-repeat: repeat;
   background-size: cover;
+}
+
+body.dark-mode {
+  background: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+body.light-mode {
+  background: linear-gradient(20deg, rgb(234, 50, 240), rgb(205, 104, 16));
+  color: #121212;
 }
 
 header {
@@ -43,11 +62,12 @@ header {
 
 main {
   flex: 1;
+  min-height: 100vh;
 }
 
 .navbar {
   width: 100%;
-  height: 100px;
+  height: 110px;
   max-width: 1200px;
   display: flex;
   align-items: center;
@@ -67,7 +87,7 @@ main {
 }
 
 .navbar .toggle_btn {
-  color: rgb(240, 167, 31);
+  color: var(--button-color);
   font-size: 2rem;
   cursor: pointer;
   display: none;
@@ -76,7 +96,7 @@ main {
 #projetos-conteudo, #games-conteudo{
   position: absolute;
   top: 70px;
-  width: 100px;
+  width: 110px;
   background: rgb(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
   border-radius: 10px;
@@ -130,14 +150,13 @@ a:hover {
 }
 
 /* DROPDOWN_MENU */
-
 .dropdown_menu {
   display: none;
   position: absolute;
   right: 2rem;
   top: 88px;
-  max-height: 0;
   width: 300px;
+  max-height: 0;
   background: rgb(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
   border-radius: 10px;
@@ -146,7 +165,8 @@ a:hover {
 }
 
 .dropdown_menu.open {
-  max-height: 80vh;
+  max-height: 70vh;
+  overflow-y: auto;
 }
 
 .dropdown_menu li {
@@ -162,7 +182,6 @@ a:hover {
   display: flex;
   justify-content: center;
 }
-
 
 #projetos-conteudo-dropdown, #games-conteudo-dropdown {
   margin-top: 10px;
@@ -191,7 +210,6 @@ a:hover {
 }
 
 /* RESPONSIVE DESIGN */
-
 @media (max-width: 768px) {
   .navbar .links,
   .navbar .action_btn {
@@ -209,10 +227,9 @@ a:hover {
   h2 {
     font-size: 1.8rem;
   }
-
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .dropdown_menu {
     left: 2rem;
     width: unset;
@@ -231,9 +248,9 @@ a:hover {
 }
 
 /* CONTENT FRAME*/
-
 section.secStyle {
   min-height: 100%;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -248,8 +265,8 @@ section.secStyle {
 }
 
 .secStyle p {
-  font-size: 1.3rem;
-  width: 90%;
+  font-size: 1.2em;
+  width: 80%;
 }
 
 article {
@@ -263,7 +280,6 @@ article {
 }
 
 /* APP Desvendar */
-
   h2 {
   font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
@@ -273,9 +289,8 @@ article {
 }
 
 #msg {
-  width: 90%;
+  width: 80%;
 }
-
 
 @keyframes typing {
   from {
@@ -303,7 +318,7 @@ article {
   margin: 25px;
   padding: 10px;
   font-size: 1.1rem;
-  background-color: rgb(240, 167, 31);
+  background-color: var(--button-color);
   color: black;
   border-radius: 30px;
   cursor: pointer;
@@ -311,11 +326,12 @@ article {
 }
 
 #gerar:hover {
-  opacity: 0.5;
+  scale: 1.05;
+  opacity: 0.7;
+  color: white;
 }
 
 /* RELOGIO */
-
 .corpo {
   display: flex;
   justify-content: center;
@@ -344,24 +360,21 @@ article {
   align-items: center;
 }
 
-
-/* signature */
 .signature {
   font-family: 'Mr De Haviland', cursive;
   font-size: 2rem;
 }
 
-/* Footer */
-
 footer {
-  margin-top: 10rem;
+  flex: 2;
+  width: 100%;
   font-size: 1.3rem;
   text-align: center;
   color: #fff;
+  margin-top: 50px;
 }
 
 /* EFFECT LOADING */
-
 .loading-container {
   display: none;
   position: fixed;
@@ -369,7 +382,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.922);
   z-index: 9999;
   justify-content: center;
   align-items: center;
@@ -398,6 +411,21 @@ footer {
 }
 
 body.loading {
-  background-color: #fff; /* cor de fundo após a animação */
-  color: #333; /* cor do texto após a animação */
+  background-color: #fff;
+  color: #333;
+}
+
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  margin-left: 15px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.material-symbols-outlined {
+  color: white;
+  font-size: 26px;
 }

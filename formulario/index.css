@@ -11,17 +11,13 @@ body {
   align-items: center;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
-  height: 100vh;
+  min-height:100vh;
   margin: -20px 0 50px;
 }
 
 h1 {
   font-weight: 500;
   margin: 0;
-}
-
-h2 {
-  text-align: center;
 }
 
 p {
@@ -64,7 +60,7 @@ button:focus {
   outline: none;
 }
 
-button.ghost {
+button.ghost{
   background-color: transparent;
   border-color: rgb(255, 153, 0);
   cursor: pointer;
@@ -102,18 +98,21 @@ input {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 360px;
-  min-height: 570px;
-  max-width: 100%;
+  min-width: 290px;
+  min-height: 590px;
+  margin-top: 10px;
   border-radius: 20px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
+
+
 
 .face {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 100%;
   color: black;
   position: absolute;
   top: 0;
@@ -139,7 +138,7 @@ input {
   text-align: center;
   color: black;
   position: absolute;
-  top: 190px
+  top: 196px
 }
 
 form{
@@ -160,68 +159,83 @@ form{
   transform: rotateY(180deg);
 }
 
-@media screen and (min-width: 768px) {
-
-#card {
-  width: 768px;
-  max-width: 100%;
-  min-height: 550px;
-  position: relative;
-  
+@media screen and (min-width: 450px) and (max-width: 768px){
+  #card {
+    min-width: 80%;
+  }
 }
 
-form {
-  position: relative;
-  bottom: 60px;
-  height: 100%;
+@media screen and (min-width: 768px){
+
+  #card {
+    width: 750px;
+    max-width: 100%;
+    min-height: 550px;
+    position: relative;
+    
+  }
+
+  form {
+    position: relative;
+    bottom: 60px;
+    height: 100%;
+  }
+
+  #front {
+    position: absolute;
+    right: 50%;
+    width: 50%;
+    top: 0;
+    height: 100%;
+  }
+
+  #front1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+  }
+
+  #back {
+    position: absolute;
+    right: 50%;
+    width: 50%;
+    top: 0;
+    height: 100%;
+  }
+
+  #back1 {
+    position: absolute;
+    left: 50%;
+    height: 100%;
+  }
+
+  .overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+  }
 }
 
-#front {
-  position: absolute;
-  right: 50%;
-  width: 50%;
-  top: 0;
-  height: 100%;
-}
-
-#front1 {
+.aviso {
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 50%;
-  width: 50%;
-  height: 100%;
+  margin-top: 15px;
 }
 
-#back {
-  position: absolute;
-  right: 50%;
-  width: 50%;
-  top: 0;
-  height: 100%;
+.aviso p {
+  font-size: 1em;
+  font-weight: bold;
 }
-
-#back1 {
-  position: absolute;
-  left: 50%;
-  height: 100%;
-}
-
-.overlay-panel {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 40px;
-  text-align: center;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  transform: translateX(0);
-  transition: all 0.6s ease-in-out;
-}
-
-}
-
