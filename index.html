@@ -1,139 +1,245 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stormlight</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <link rel="stylesheet" href="estilo/Index.css">
-
-</head>
-<body>
-  <div class="loading-container" id="loadingContainer">
-    <div class="loading-animation"></div>
-    <div class="loading-message">Aguarde, gerando mensagem</div>
-  </div>
-
-  <header>
-    <div class="navbar">
-      <div class="corpo">
-        <div class="relogio" id="relogio">
-          <div id="hora"></div>
-          <div><span class="blink">:</span></div>
-          <div id="minuto"></div>
-          <div><span class="blink">:</span></div>
-          <div id="segundo"></div>
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stormlight</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="estilo/Index.css" />
+  </head>
+  <body>
+    <div class="loading-container" id="loadingContainer">
+      <div class="loading-animation"></div>
+      <div class="loading-message">Aguarde, gerando mensagem</div>
     </div>
-      <ul class="links">
+
+    <header>
+      <div class="navbar">
+        <div class="corpo">
+          <div class="relogio" id="relogio">
+            <div id="hora"></div>
+            <div><span class="blink">:</span></div>
+            <div id="minuto"></div>
+            <div><span class="blink">:</span></div>
+            <div id="segundo"></div>
+          </div>
+        </div>
+        <ul class="links">
+          <li><a href="my.html" target="_parent">My</a></li>
+          <li><a href="estudos.html" target="_parent">Estudos</a></li>
+
+          <li>
+            <a href="#" id="projetos-link">Projetos</a>
+            <ul id="projetos-conteudo" class="hidden">
+              <li>
+                <a
+                  href="https://stormlig.github.io/html5-css3/projeto-cordel/"
+                  target="_blank"
+                  >Cordel</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://stormlig.github.io/projeto-login/"
+                  target="_blank"
+                  >Login</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://stormlig.github.io/projeto-social/"
+                  target="_blank"
+                  >Social</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://stormlig.github.io/Project-Training/"
+                  target="_blank"
+                  >Training</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://stormlig.github.io/Analisador-Numerico/"
+                  target="_blank"
+                  >Analisador</a
+                >
+              </li>
+              <li>
+                <a href="formulario/index.html" target="_blank">Formulário</a>
+              </li>
+              <li>
+                <a
+                  href="https://stormlig.github.io/Paralax-Scrolling/"
+                  target="_blank"
+                  >Paralax-Scrolling</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#" id="games-link">Games</a>
+            <ul id="games-conteudo" class="hidden">
+              <li>
+                <a href="https://stormlig.github.io/Adivinha/" target="_blank"
+                  >Forca</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <a href="#" class="action_btn">Get Started</a>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="dropdown_menu">
         <li><a href="my.html" target="_parent">My</a></li>
         <li><a href="estudos.html" target="_parent">Estudos</a></li>
 
-        <li><a href="#" id="projetos-link">Projetos</a>
-          <ul id="projetos-conteudo" class="hidden" >
-            <li><a href="https://stormlig.github.io/html5-css3/projeto-cordel/" target="_blank">Cordel</a></li>
-            <li><a href="https://stormlig.github.io/projeto-login/" target="_blank">Login</a></li>
-            <li><a href="https://stormlig.github.io/projeto-social/" target="_blank">Social</a></li>
-            <li><a href="https://stormlig.github.io/Project-Training/" target="_blank">Training</a></li>
-            <li><a href="Analisador-Numerico/index.html" target="_blank">Analisador</a></li>
-            <li><a href="formulario/index.html" target="_blank">Formulário</a></li>
+        <li>
+          <a href="#" id="projetos-link-dropdown">Projetos</a>
+          <ul id="projetos-conteudo-dropdown" class="hidden">
+            <li>
+              <a
+                href="https://stormlig.github.io/html5-css3/projeto-cordel/"
+                target="_blank"
+                ><span class="arrowS">➤</span> Cordel</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://stormlig.github.io/projeto-login/"
+                target="_blank"
+                ><span class="arrowS">➲</span> Login</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://stormlig.github.io/projeto-social/"
+                target="_blank"
+                ><span class="arrowS">➥</span> Social</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://stormlig.github.io/Project-Training/"
+                target="_blank"
+                ><span class="arrowS">➔</span> Training</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://stormlig.github.io/Analisador-Numerico/"
+                target="_blank"
+                ><span class="arrowS">➔</span> Analisador</a
+              >
+            </li>
+            <li>
+              <a href="formulario/index.html" target="_blank"
+                ><span class="arrowS">➲</span> Formulário</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://stormlig.github.io/Paralax-Scrolling/"
+                target="_blank"
+                ><span class="arrowS">➲</span> Paralax-Scrolling</a
+              >
+            </li>
           </ul>
         </li>
 
-        <li><a href="#" id="games-link">Games</a>
-          <ul id="games-conteudo" class="hidden">
-            <li><a href="https://stormlig.github.io/Adivinha/" target="_blank">Forca</a></li>
+        <li>
+          <a href="#" id="games-link-dropdown">Games</a>
+          <ul id="games-conteudo-dropdown" class="hidden">
+            <li>
+              <a href="https://stormlig.github.io/Adivinha/" target="_blank"
+                ><span class="arrowSG">➻</span> Forca</a
+              >
+            </li>
           </ul>
         </li>
-      </ul>
-
-      <a href="#" class="action_btn">Get Started</a>
-      <div class="toggle_btn">
-        <i class="fa-solid fa-bars"></i>
+        <li><a href="#" class="action_btn">Get Started</a></li>
       </div>
-    </div>
-
-    <div class="dropdown_menu">
-      <li><a href="my.html" target="_parent">My</a></li>
-      <li><a href="estudos.html" target="_parent">Estudos</a></li>
-
-      <li><a href="#" id="projetos-link-dropdown">Projetos</a>
-        <ul id="projetos-conteudo-dropdown" class="hidden">
-          <li><a href="https://stormlig.github.io/html5-css3/projeto-cordel/" target="_blank"><span class="arrowS">➤</span> Cordel</a></li>
-          <li><a href="https://stormlig.github.io/projeto-login/" target="_blank"><span class="arrowS">➲</span> Login</a></li>
-          <li><a href="https://stormlig.github.io/projeto-social/" target="_blank"><span class="arrowS">➥</span> Social</a></li>
-          <li><a href="https://stormlig.github.io/Project-Training/" target="_blank"><span class="arrowS">➔</span> Training</a></li>
-          <li><a href="Analisador/index.html" target="_blank"><span class="arrowS">➔</span> Analisador</a></li>
-          <li><a href="formulario/index.html" target="_blank"><span class="arrowS">➲</span> Formulário</a></li>
-        </ul>
-      </li>
-
-      <li><a href="#" id="games-link-dropdown">Games</a>
-        <ul id="games-conteudo-dropdown" class="hidden">
-          <li><a href="https://stormlig.github.io/Adivinha/" target="_blank"><span class="arrowSG">➻</span> Forca</a></li>
-        </ul>
-      </li>
-      <li><a href="#" class="action_btn">Get Started</a></li>
-    </div>
-    <div class="div-buttons">
-      <button id="darkModeButton" onclick="toggleDarkMode()">
-        <span class="material-symbols-outlined">dark_mode</span>
-      </button>
-      <button id="day-LightButton" onclick="toggleDayLight()">
-        <span class="material-symbols-outlined">light_mode</span>
-      </button>
-    </div>
-  </header>
-  <main>
-
-<!-- section  -->
-    <section class="secStyle" >
-      <h1>Bem-vindo</h1>
-      <p>Ao meu mundo criativo, onde jogos ganham vida, palavras inspiram e projetos se transformam em realidade. Explore as possibilidades, mergulhe em minha jornada e descubra o que a arte da inovação pode criar.</p>
-
-    </section>
-
-<!-- Article -->
-    <article>
-      <div id="msg" >
-        <h2>"Quer descobrir a mensagem secreta que pode transformar o seu dia? <br> Com apenas um clique você pode, desvende um mundo de inspiração e positividade!"</h2>
+      <div class="div-buttons">
+        <button id="darkModeButton" onclick="toggleDarkMode()">
+          <span class="material-symbols-outlined">dark_mode</span>
+        </button>
+        <button id="day-LightButton" onclick="toggleDayLight()">
+          <span class="material-symbols-outlined">light_mode</span>
+        </button>
       </div>
+    </header>
+    <main>
+      <!-- section  -->
+      <section class="secStyle">
+        <h1>Bem-vindo</h1>
+        <p>
+          Ao meu mundo criativo, onde jogos ganham vida, palavras inspiram e
+          projetos se transformam em realidade. Explore as possibilidades,
+          mergulhe em minha jornada e descubra o que a arte da inovação pode
+          criar.
+        </p>
+      </section>
 
-      <div id="flex-gerar" >
-        <button id="gerar" onclick="startLoading()">Desvendar</button>
-      </div>
-    </article>
+      <!-- Article -->
+      <article>
+        <div id="msg">
+          <h2>
+            "Quer descobrir a mensagem secreta que pode transformar o seu dia?
+            <br />
+            Com apenas um clique você pode, desvende um mundo de inspiração e
+            positividade!"
+          </h2>
+        </div>
 
-  </main>
-  <footer>
-    <p>Developer: <span class="signature">HerrisonES</span></p>
-  </footer>
-  <script src="menu.js"></script>
-  <script src="relogio.js"></script>
-  <script>
-  function startLoading() {
-    var loadingContainer = document.getElementById('loadingContainer');
-    var body = document.body;
+        <div id="flex-gerar">
+          <button id="gerar" onclick="startLoading()">Desvendar</button>
+        </div>
+      </article>
+    </main>
+    <footer>
+      <p>Developer: <span class="signature">HerrisonES</span></p>
+    </footer>
+    <script src="menu.js"></script>
+    <script src="relogio.js"></script>
+    <script>
+      function startLoading() {
+        var loadingContainer = document.getElementById("loadingContainer");
+        var body = document.body;
 
-    loadingContainer.style.display = 'flex';
-    body.classList.add('loading');
+        loadingContainer.style.display = "flex";
+        body.classList.add("loading");
 
-    setTimeout(function() {
-      loadingContainer.style.display = 'none';
-      body.classList.remove('loading');
-      window.location.href = 'textos.html';
-    }, 3000);
-  }
+        setTimeout(function () {
+          loadingContainer.style.display = "none";
+          body.classList.remove("loading");
+          window.location.href = "textos.html";
+        }, 3000);
+      }
 
-  function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-  }
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+      }
 
-  function toggleDayLight() {
-    document.body.classList.toggle('light-mode');
-  }
-
-  </script>
-</body>
+      function toggleDayLight() {
+        document.body.classList.toggle("light-mode");
+      }
+    </script>
+  </body>
 </html>
