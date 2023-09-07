@@ -21,4 +21,4 @@ Desenvolvedor: Herrison Souza
 
 Data de Criação: 22 de Maio de 2023
 
-Última Atualização: 23 de Julho de 2023
+Última implementação: 23 de Julho de 2023
