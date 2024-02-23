@@ -1,0 +1,311 @@
+@charset "UTF-8";
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap');
+
+:root {
+
+  --cor0: #359381;
+  --cor1: #003329;
+  --cor2: #f9f9f9;
+  --cor3: #333;
+  --cor4: #fff;
+  --cor5: rgba(221, 230, 222, 0.6);
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: var(--cor5);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* adjust spacing */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 3em 4em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 2.5rem;
+  padding-right: .5em;
+  color: var(--cor0);
+  pointer-events: none;
+}
+
+.navbar {
+  display: none;
+}
+
+.toggle_btn {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+  backdrop-filter: blur(15px);
+  padding: 7px;
+  border-radius: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--cor0);
+  font-size: 1.2rem;
+  transition: transform 0.5s
+}
+
+a:hover {
+  color: var(--cor1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+}
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 88px;
+  max-height: 0;
+  width: 100px;
+  background: rgb(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+  max-height: 50vh;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dropdown_menu:hover {
+  display: block;
+}
+
+
+
+.dropdown_menu {
+  left: 2rem;
+  width: unset;
+}
+
+@media (max-width: 768px) {
+
+  .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
+}
+
+
+                /* Parallax */
+
+.parallax {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#text {
+  position: absolute;
+  font-size: 2.5rem;
+  color: var(--cor4);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.parallax img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  pointer-events: none;
+}
+
+.sec {
+  position: relative;
+  background: var(--cor5);
+  padding: 100px;
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: var(--cor3);
+  
+}
+
+.sec p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: var(--cor3);
+  font-weight: 500;
+  font-family: 'Open Sans', sans-serif;
+  text-align: left ;
+  letter-spacing: 1px;
+  line-height: 1.4em;
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: var(--cor3);
+  margin-top: 20px;
+  line-height: 2em;
+}
+
+.cite {
+  color: var(--cor3);
+  font-size: 1.2rem;
+  line-height: 2em;
+}
+
+.cite a {
+  text-decoration: none;
+  color: var(--cor4);
+  background-color: var(--cor0);
+  padding: 1px;
+}
+
+footer {
+  background: var(--cor5);
+  text-align: center;
+  color: var(--cor3);
+  padding: 10px 0;
+}
+
+footer p {
+  font-size: 1.4rem;
+}
+
+.signature {
+  font-family: 'Mr De Haviland', cursive;
+  font-size: 2.5rem;
+}
+
+        /* Responsividade Screen */
+
+@media (min-width: 768px) {
+
+  .navbar {
+    display: flex;
+  }
+
+  .navbar a {
+    font-weight: 700;
+    background: transparent;
+    color: var(--cor0);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    margin-left: 30px;
+    padding: 5px;
+  }
+
+  .navbar a:hover {
+    background: var(--cor1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: var(--cor2);
+  } 
+
+  #text {
+    position: absolute;
+    font-size: 5em;
+    color: var(--cor4);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .sec h2 {
+    font-size: 3rem;
+    color: var(--cor3);
+    margin-bottom: 10px;
+  }
+
+  .sec p {
+    font-size: 1.2rem;
+    color: var(--cor3);
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 2px;
+    line-height: 1.4em;
+  }
+  
+  h3 {
+    font-size: 1.8rem;
+    color: var(--cor3);
+    margin-top: 20px;
+    line-height: 2em;
+  }
+  
+  .cite {
+    color: var(--cor3);
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  
+  .cite a {
+    text-decoration: none;
+    color: var(--cor4);
+    background-color: var(--cor0);
+    padding: 1px;
+  }
+
+  .parallax img {
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  header{
+    justify-content: center;
+  }
+
+  .logo {
+    margin-right: 400px;
+  }
+
+  .navbar a {
+    background: var(--cor0);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    color: var(--cor2);
+  } 
+
+  .parallax img {
+    width: 100%;
+  }
+}

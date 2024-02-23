@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create an Accout</title>
+</head>
+<body>
+  <main>
+    <section>
+      <form action="database.js" method="post">
+        <fieldset>
+          <legend>Register Here</legend>
+          <p>
+            <label for="iusu">created your username</label>
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="16" size="25" autocomplete="username">
+          </p>
+
+          <p>
+            <label for="isen">create your password </label>
+            <input type="password" name="sen" id="isen" required minlength="8" maxlength="32" size="33" autocomplete="current-password">
+          </p>
+
+          <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+          </p>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

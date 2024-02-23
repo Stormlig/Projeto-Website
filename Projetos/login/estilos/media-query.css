@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+:root {
+  --cor0:#80A7BF;
+  --cor1:#0E5673;
+  --cor2:#A64208;
+  --cor3:#591902;
+  --cor4:#F2D8CE;
+}
+
+@media screen and (min-width: 768px) {
+
+  body {
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor0), var(--cor2), var(--cor3), var(--cor4)) ;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  p {
+    text-align: justify;
+    text-indent: 10px;
+    margin: 5px;
+    margin-bottom: 5px;
+  }
+
+  section#login {
+    width: 85vw;
+    height: 345px;
+  }
+  
+  section#login > div#image {
+    float: left;
+    width: 40%;
+    height: 100%;
+  }
+
+  section#login > div#form {
+    float: right;
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  section#login {
+    width: 950px;
+    height: 352px;
+  }
+
+  p {
+    text-align: justify;
+    text-indent: 10px;
+    margin: 5px;
+    margin-bottom: 5px;
+  }
+  
+  section#login > div#image {
+    background-image: url(../imagens/corredor.jpg);
+    float: right;
+    width: 50%;
+    height: 100%;
+  }
+
+  section#login > div#form {
+    float: left;
+    width: 50%;
+  }
+
+  div#form > h1 {
+    font-size: 2em;
+  }
+
+  div#form > p {
+    font-size: 1.2em;
+  }
+}

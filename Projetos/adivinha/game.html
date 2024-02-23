@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game</title>
+  <link rel="stylesheet" href="estilos/game.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Tente Adivinhar!!</h1>
+    <nav>
+      <div id="nome-usuario"><div class="user-name">Olá, <span id="span-nome-usuario"></span>!</div> <div class="user-pontos"></div>Pontos: <span id="pontos" class="user-pontos"></span></div>
+    </nav>
+  </header>
+  <main>
+
+    <div id="container"><input type="button" value="Jogar" onclick="start" id="start" ></div>
+
+    <div class="notification" id="notification"></div>
+
+    <div id="main-info">
+      <div class="info" id="info">
+        <p>Descubra a emoção de desvendar palavras e revelar imagens incríveis na mais nova versão do jogo da forca! Prepare-se para uma experiência única e viciante, onde cada letra correta o levará mais perto da vitória.</p>
+
+        <p>A melhor parte? Agora você tem 10 chances para errar antes de perder o jogo. Teste suas habilidades e conhecimentos sem medo! Seja você um mestre das palavras ou um novato curioso, a diversão está garantida.</p>
+      </div>
+    </div>
+
+<div id="contain" >
+  <div class="contain">
+    <div id="imagem"></div>
+    <div id="show"></div>
+    <div class="ui-game">
+      <input type="text" name="receivetxt" id="receivetxt" class="exibir" placeholder="Digite uma palavra ou letra">
+      <input type="button" value="Enviar" id="send" class="exibir">
+    </div>
+    <div id="showErro"></div>
+  </div>
+  
+</div>
+
+  <aside class="info1" id="info1">
+    <h2>Como jogar:</h2>
+    <p>Em nossa nova versão do jogo da forca, o objetivo é simples: <br> Desvende as palavras e releve a imagem escondida. <br> Prove a você mesmo que você é capaz de desvendar e aprender novas palavras com esse desafio!<br>
+    <strong>Após acerta a palavra o jogo recomeça automaticamente depois de 3s.</strong></p>
+    <h2>Dica:</h2>
+    <ul>
+      <li><strong>1. </strong>Comece com vogais</li>
+      <li><strong>2. </strong>Observe a imagem com forme você for acertando as letras</li>
+      <li><strong>3. </strong>Solicite ajuda às pessoas ao seu redor.</li>
+      <li><strong>4. </strong>Tente escrever as possiveis palavras que surgi na sua mente em um pedaço de papel.</li>
+      <li><strong>5. </strong>Lembre que a acentuação também conta.</li>
+    </ul>
+  </aside>
+
+  <div id="info5" class="info3">
+    <div class="att-atual">
+      <h2>O que há de novo?</h2>
+      <p>
+        Na versão 2.0, foram implementadas novas palavras e adicionado um ranking, além de correções de alguns bugs. Também foi adicionado um novo visual ao jogo para proporcionar uma melhor experiência de jogo aos usuários.
+      </p>
+    </div>
+
+    <div class="att-proxima">
+      <h2>Próximas atualizações!</h2>
+      <p>
+        Pedimos que, caso vocês notem algum novo bug, entrem em contato comigo pelo <span>DISCORD: _stormlight_</span> para que eu possa realizar a correção.
+      </p>
+      <P><strong>Caso tenham alguma sugestão não hesitem em me informar!!</strong></P>
+    </div>
+  </div>
+  </main>
+
+  <div id="ranking-container">
+    <h1>Ranking de Usuários</h1>
+    <p>Encontramos um bug na exibição do ranking, então ele está desativado temporariamente</p>
+    <ul id="ranking-list"></ul>
+  </div>
+
+  <script src="settingsButton.js"></script>
+  <script src="forca.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

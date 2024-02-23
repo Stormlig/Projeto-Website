@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Menu</title>
+  <link rel="stylesheet" href="estilos/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="estilos/media-query.css">
+</head>
+<body onresize="mudouTamanho()">
+  <header>
+    <h1> Training</h1>
+    <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">
+      menu
+      </span>
+    <menu id="itens">
+      <ul>
+        <li><a href="https://stormlig.github.io/projeto-android/ " target="_blank">Project - Android</a></li>
+        <li><a href="https://stormlig.github.io/html5-css3/projeto-cordel/" target="_blank">Project - Cordel</a></li>
+        <li><a href="https://stormlig.github.io/projeto-social/" target="_blank">Project - Social</a></li>
+        <li><a href="https://stormlig.github.io/projeto-login/">Project - Login</a></li>
+        <li><a href="#">Opção 5</a></li>
+      </ul>
+    </menu>
+  </header>
+  <main>
+    <article>
+      <h2>Hi, Guys</h2>
+      <p class="cor">After creating this small project, I decided to expand it a bit more by linking other previously made projects to it. You can access them by interacting with the menu above. I hope navigation is fun. Thank you to everyone who is testing.</p>
+
+      <p class="cor">All projects will be improved. I hope that the next time you visit one of them, will have already been modified. <strong>Thank you.</strong></p>
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident et distinctio minima vel numquam assumenda corporis sit! Explicabo ab placeat corrupti, eligendi consequuntur ea suscipit quia, nemo harum velit qui?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati beatae commodi repudiandae quia natus, minima debitis deleniti impedit temporibus, asperiores laboriosam, odio quisquam exercitationem fugiat. Facere iure quas non consequuntur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti unde maxime similique ipsa culpa ex cupiditate magni, illum placeat quasi aliquam tenetur eligendi sit quas alias esse laudantium, officiis dolores.</p>
+
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat qui magnam corrupti nulla aut, tempora culpa eum sequi sed molestias numquam debitis porro voluptatem quos? Quia dicta harum ullam deleniti.</p>
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus impedit in quod illo cumque ipsum consequatur ullam, doloribus, vitae eveniet ratione earum suscipit dolorum hic facere. Doloremque maxime neque consectetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi sapiente minus recusandae harum placeat expedita dolor, corrupti doloremque ipsa quos? Commodi deleniti minima dignissimos quod earum ratione error ea? Alias? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, rem! Iusto dolor, nostrum officiis eaque suscipit obcaecati corrupti quisquam quo repellat voluptatibus pariatur incidunt, ut porro facere, inventore sit nesciunt!</p>
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum voluptate excepturi id harum, sit eligendi porro placeat corporis quod? Quidem, natus neque! Facere laborum quae perspiciatis dolores sit nihil aliquam!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis cupiditate nostrum natus unde beatae! Quae doloribus quia sapiente perferendis? Delectus earum praesentium quas architecto perferendis velit expedita vitae eligendi deserunt.</p>
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde reprehenderit voluptatum quos natus dolor modi, ipsa blanditiis nesciunt aut fuga, hic rerum alias ullam quam soluta ducimus qui dolorem ipsum!</p>
+    </article>
+  </main>
+  <aside>
+    <p>
+      This website model was created with the purpose of improving and assisting in the consolidation of knowledge about interaction with <strong>responsive menus.</strong> Thank you for helping with the testing.
+    </p>
+  </aside>
+
+  <script>
+    function mudouTamanho() {
+      if (window.innerWidth >=1060) {
+        itens.style.display = 'block'
+      } else {
+        itens.style.display = 'none'
+      }
+    }
+
+    /* = = é o mesmo que igual
+      = sozinho é o mesmo que recebe no javascript
+    */
+    function clickMenu() {
+      if (itens.style.display =='block') {
+        itens.style.display = 'none'
+      } else {
+        itens.style.display = 'block'
+      }
+    }
+  </script>
+
+  <footer>
+    <p>Developed with the support of CursoemVideo, <span class="dvl">by: Stormlight.</span> </p>
+  </footer>
+</body>
+</html>

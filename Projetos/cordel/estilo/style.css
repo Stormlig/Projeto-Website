@@ -1,0 +1,148 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Sriracha&family=Srisakdi&display=swap');
+
+:root {
+  --font1: Verdana, Geneva, Tahoma, sans-serif;
+  --font2: 'Passion One', cursive;
+  --font3: 'Sriracha', cursive;
+  --font4:'Srisakdi', cursive;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html, body {
+  min-height: 100vh;
+  background-color: darkgray;
+  font-family: var(--font1);
+}
+
+header {
+  background-color: black;
+  color: white;
+  text-align: center;
+
+}
+
+header > h1 {
+  padding-top: 50px;
+  font-variant: small-caps;
+  font-family: var(--font2);
+  font-size: 10vw;
+}
+
+header > p {
+  padding-bottom: 50px;
+}
+
+header a, footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header a:hover, footer a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding-top: 12vh;
+  padding-bottom: 12vh;
+  line-height: 2.5em;
+  padding-left: 30px;
+  list-style-position: inside;
+  columns: 2;
+  font-family: var(--font3);
+  font-size: 2.7vw;
+}
+
+section > p {
+  padding-bottom: 2.5em;
+  text-align: justify;
+}
+
+section.normal {
+  background-color: white;
+  color: black;
+}
+
+section.image {
+background-color: chocolate;
+color: antiquewhite;
+box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.663);
+background-size: cover;
+background-attachment: fixed;
+}
+
+section.image > p {
+  background-color: rgba(0, 0, 0, 0.607);
+  padding: 5px;
+  padding-right: 14px;
+  text-shadow: 1px 1px 1px black;
+}
+
+p.pt-br {
+  text-align: right;
+  padding-right: 20px;
+}
+
+section#img01{
+  background-image: url('../imagens/background001.jpg');
+  background-position: center center;
+}
+
+section#img02{
+  background-image: url('../imagens/background002.jpg');
+}
+
+aside {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  line-height: 1.5em;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: var(--font1);
+  font-size: 2.7vw;
+}
+
+aside > h3 {
+text-align: center;
+padding-top: 10px;
+color: white;
+}
+
+aside > p {
+  padding-bottom: 2.5em;
+  text-align: justify;
+  color: white;
+}
+
+aside.imgpe > p, h3 {
+  text-indent: 5px;
+  background-color: rgba(0, 0, 0, 0.607);
+  padding: 15px 15px 10px;
+  text-shadow: 1px 1px 1px black;
+  border-radius: 5px;
+}
+
+aside#imgpeg {
+background-image: url('../imagens/imgrodapé01.jpg');
+background-position: left top;
+background-size: cover;
+background-attachment: fixed;
+box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.603);
+}
+
+.spacing {
+  padding: 10%;
+  background-color: white;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
