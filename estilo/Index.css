@@ -38,6 +38,8 @@
 }
 
 body {
+  overflow-x: hidden;
+  width: 100%;
   height: 100%;
   background: linear-gradient(195deg, #0b0b0b 30%, #244348 80%, #e5bd0a );
   background-repeat: repeat;
@@ -62,7 +64,7 @@ header {
 
 main {
   flex: 1;
-  min-height: 100vh;
+  min-height: 70vh;
 }
 
 .navbar {
@@ -366,12 +368,13 @@ article {
 }
 
 footer {
-  flex: 2;
+  
   width: 100%;
   font-size: 1.3rem;
   text-align: center;
   color: #fff;
   margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 /* EFFECT LOADING */

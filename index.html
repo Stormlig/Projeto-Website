@@ -35,7 +35,7 @@
           </div>
         </div>
         <ul class="links">
-          <li><a href="my.html" target="_parent">My</a></li>
+          <li><a href="my.html" target="_parent">Sobre mim</a></li>
           <li><a href="estudos.html" target="_parent">Estudos</a></li>
 
           <li>
@@ -43,35 +43,35 @@
             <ul id="projetos-conteudo" class="hidden">
               <li>
                 <a
-                  href="https://stormlig.github.io/html5-css3/projeto-cordel/"
+                  href="/cordel/projeto-cordel/index.html"
                   target="_blank"
                   >Cordel</a
                 >
               </li>
               <li>
                 <a
-                  href="https://stormlig.github.io/projeto-login/"
+                  href="/projeto-login/index.html"
                   target="_blank"
                   >Login</a
                 >
               </li>
               <li>
                 <a
-                  href="https://stormlig.github.io/projeto-social/"
+                  href="/projeto-social/index.html"
                   target="_blank"
                   >Social</a
                 >
               </li>
               <li>
                 <a
-                  href="https://stormlig.github.io/Project-Training/"
+                  href="/Project-Training/index.html"
                   target="_blank"
                   >Training</a
                 >
               </li>
               <li>
                 <a
-                  href="https://stormlig.github.io/Analisador-Numerico/"
+                  href="/Analisador-Numerico/index.html"
                   target="_blank"
                   >Analisador</a
                 >
@@ -81,9 +81,9 @@
               </li>
               <li>
                 <a
-                  href="https://stormlig.github.io/Paralax-Scrolling/"
+                  href="/Paralax-Scrolling/index.html"
                   target="_blank"
-                  >Paralax-Scrolling</a
+                  >Parallax-Scrolling</a
                 >
               </li>
             </ul>
@@ -93,22 +93,22 @@
             <a href="#" id="games-link">Games</a>
             <ul id="games-conteudo" class="hidden">
               <li>
-                <a href="https://stormlig.github.io/Adivinha/" target="_blank"
-                  >Forca</a
+                <a href="/Adivinha/index.html" target="_blank"
+                  >Adivinha!</a
                 >
               </li>
             </ul>
           </li>
         </ul>
 
-        <a href="#" class="action_btn">Get Started</a>
+        
         <div class="toggle_btn">
           <i class="fa-solid fa-bars"></i>
         </div>
       </div>
 
       <div class="dropdown_menu">
-        <li><a href="my.html" target="_parent">My</a></li>
+        <li><a href="my.html" target="_parent">Sobre mim</a></li>
         <li><a href="estudos.html" target="_parent">Estudos</a></li>
 
         <li>
@@ -116,35 +116,35 @@
           <ul id="projetos-conteudo-dropdown" class="hidden">
             <li>
               <a
-                href="https://stormlig.github.io/html5-css3/projeto-cordel/"
+                href="/cordel/projeto-cordel/index.html"
                 target="_blank"
                 ><span class="arrowS">➤</span> Cordel</a
               >
             </li>
             <li>
               <a
-                href="https://stormlig.github.io/projeto-login/"
+                href="/projeto-login/index.html"
                 target="_blank"
                 ><span class="arrowS">➲</span> Login</a
               >
             </li>
             <li>
               <a
-                href="https://stormlig.github.io/projeto-social/"
+                href="/projeto-social/index.html"
                 target="_blank"
                 ><span class="arrowS">➥</span> Social</a
               >
             </li>
             <li>
               <a
-                href="https://stormlig.github.io/Project-Training/"
+                href="/Project-Training/index.html"
                 target="_blank"
                 ><span class="arrowS">➔</span> Training</a
               >
             </li>
             <li>
               <a
-                href="https://stormlig.github.io/Analisador-Numerico/"
+                href="/Analisador-Numerico/index.html"
                 target="_blank"
                 ><span class="arrowS">➔</span> Analisador</a
               >
@@ -156,9 +156,9 @@
             </li>
             <li>
               <a
-                href="https://stormlig.github.io/Paralax-Scrolling/"
+                href="/Paralax-Scrolling/index.html"
                 target="_blank"
-                ><span class="arrowS">➲</span> Paralax-Scrolling</a
+                ><span class="arrowS">➲</span> Parallax-Scrolling</a
               >
             </li>
           </ul>
@@ -168,19 +168,19 @@
           <a href="#" id="games-link-dropdown">Games</a>
           <ul id="games-conteudo-dropdown" class="hidden">
             <li>
-              <a href="https://stormlig.github.io/Adivinha/" target="_blank"
-                ><span class="arrowSG">➻</span> Forca</a
+              <a href="/Adivinha/index.html" target="_blank"
+                ><span class="arrowSG">➻</span> Adivinha</a
               >
             </li>
           </ul>
         </li>
-        <li><a href="#" class="action_btn">Get Started</a></li>
+        
       </div>
       <div class="div-buttons">
         <button id="darkModeButton" onclick="toggleDarkMode()">
           <span class="material-symbols-outlined">dark_mode</span>
         </button>
-        <button id="day-LightButton" onclick="toggleDayLight()">
+        <button id="day-LightButton" onclick="toggleLightMode()">
           <span class="material-symbols-outlined">light_mode</span>
         </button>
       </div>
@@ -234,12 +234,22 @@
       }
 
       function toggleDarkMode() {
-        document.body.classList.toggle("dark-mode");
-      }
+    if (document.body.classList.contains("dark-mode")) {
+      document.body.classList.remove("dark-mode");
+    } else {
+      document.body.classList.add("dark-mode");
+      document.body.classList.remove("light-mode");
+    }
+  }
 
-      function toggleDayLight() {
-        document.body.classList.toggle("light-mode");
-      }
+  function toggleLightMode() {
+    if (document.body.classList.contains("light-mode")) {
+      document.body.classList.remove("light-mode");
+    } else {
+      document.body.classList.add("light-mode");
+      document.body.classList.remove("dark-mode");
+    }
+  }
     </script>
   </body>
 </html>
